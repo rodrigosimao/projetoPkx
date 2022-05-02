@@ -4,7 +4,7 @@ export const HeaderStyle = styled.header`
   background-color: ${({ theme }) => theme.theme.primary};
 `;
 export const ContainerStyle = styled.div`
-  max-width: 1015px;
+  max-width: 70%;
   margin: 0 auto;
   padding: 5px 0px;
   display: flex;
@@ -32,6 +32,18 @@ export const MenuListStyle = styled.div`
     padding: 20px;
     font-weight: 900;
     color: ${({ theme }) => theme.theme.secondary};
+    cursor: pointer;
+  }
+
+  li span {
+    font-family: 'Flexo';
+    font-size: 1.25em;
+    letter-spacing: -1px;
+    display: block;
+    padding: 20px;
+    font-weight: 900;
+    color: ${({ theme }) => theme.theme.secondary};
+    cursor: pointer;
   }
 
   li a:visited {

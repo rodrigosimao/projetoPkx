@@ -1,4 +1,5 @@
-import React, { memo } from 'react';
+import Modal from 'react-modal';
+import React, { memo, useState } from 'react';
 import Logotipo from '../../assets/images/logo.png';
 import IconTheme from '../../assets/images/icon_moon.png';
 
@@ -11,6 +12,16 @@ import {
 } from './style';
 
 function Header() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function handleOpenModal() {
+    setIsOpen(true);
+  }
+
+  function handleCloseModal() {
+    setIsOpen(false);
+  }
+
   return (
     <HeaderStyle>
       <ContainerStyle>
@@ -22,10 +33,22 @@ function Header() {
         <MenuListStyle>
           <ul>
             <li>
-              <a href="sobre">Sobre o projeto</a>
+              <span href="sobre" onClick={handleOpenModal}>
+                Sobre o projeto
+              </span>
+              <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
+                <h2>Hello!!!!</h2>
+                <button onClick={handleCloseModal}>close</button>
+                <div>I am a modal</div>
+              </Modal>
             </li>
             <li>
-              <a href="git">GitHub</a>
+              <a
+                href="https://github.com/rodrigosimao/projetoPkx"
+                target="_blank"
+              >
+                GitHub
+              </a>
             </li>
           </ul>
         </MenuListStyle>

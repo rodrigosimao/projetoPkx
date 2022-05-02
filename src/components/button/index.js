@@ -17,16 +17,6 @@ function BotaoCarregar() {
   useEffect(() => {
     carregarPokemons();
   }, []);
-
-  //Botao load more
-
-  return (
-    <div className="botao-carregar">
-      <button className="load-more" onClick={() => carregarPokemons()}>
-        Load more
-      </button>
-    </div>
-  );
 }
 
 export default BotaoCarregar;

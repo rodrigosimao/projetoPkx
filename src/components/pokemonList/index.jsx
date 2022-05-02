@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import Pagination from '../pagination';
 import Pokemon from './pokemon';
 
-import { TitleContainer, TitleList, PokemonGrid } from './style';
+import { TitleContainer, TitleList, PokemonGrid, LoadingCard } from './style';
 
 const PokemonList = (props) => {
   const { pokemons, loading, page, setPage, totalPages } = props;
@@ -28,8 +28,13 @@ const PokemonList = (props) => {
           onRightClick={onRightClickHandler}
         />
       </TitleList>
+
       {loading ? (
-        <div>Carregando . . . </div>
+        <LoadingCard>
+          <div>
+            <h1>Carregando . . .</h1>{' '}
+          </div>
+        </LoadingCard>
       ) : (
         <PokemonGrid>
           {pokemons &&

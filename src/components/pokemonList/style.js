@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const TitleContainer = styled.div``;
 
 export const TitleList = styled.div`
+  margin: 0 auto;
+  max-width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,15 +12,21 @@ export const TitleList = styled.div`
   padding: 10px;
 `;
 
+export const LoadingCard = styled.div`
+  text-align: center;
+`;
+
 export const PokemonGrid = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 1250px;
+  max-width: 95%;
   margin: 0 auto;
 `;
 
 export const BackgroundCard = styled.div`
+  cursor: pointer;
+
   .bug {
     background-color: ${({ theme }) => theme.bgCard.bug};
   }
@@ -309,3 +317,5 @@ export const PokemonTypeText = styled.div`
     font-family: ${({ theme }) => theme.fontFamily.type};
   }
 `;
+
+export const CardNameDetail = styled.div``;

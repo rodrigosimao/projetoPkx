@@ -4,8 +4,9 @@ export const FooterStyle = styled.header`
   background-color: ${({ theme }) => theme.theme.primary};
 `;
 export const ContainerStyle = styled.div`
-  max-width: 1015px;
+  max-width: 100%;
   margin: 0 auto;
+  margin-top: 60px;
   padding: 5px 0px;
   display: flex;
   flex-wrap: wrap;
