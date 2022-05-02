@@ -1,156 +1,35 @@
 import styled from 'styled-components';
 
-export const TitleContainer = styled.div``;
-
-export const TitleList = styled.div`
-  margin: 0 auto;
-  max-width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-`;
-
-export const LoadingCard = styled.div`
-  text-align: center;
-`;
-
-export const PokemonGrid = styled.div`
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 95%;
-  margin: 0 auto;
-`;
-
-export const BackgroundCard = styled.div`
-  cursor: pointer;
-
-  .bug {
-    background-color: ${({ theme }) => theme.bgCard.bug};
-  }
-
-  .dark {
-    background-color: ${({ theme }) => theme.bgCard.dark};
-  }
-
-  .dragon {
-    background-color: ${({ theme }) => theme.bgCard.dragon};
-  }
-
-  .electric {
-    background-color: ${({ theme }) => theme.bgCard.electric};
-  }
-
-  .fairy {
-    background-color: ${({ theme }) => theme.bgCard.fairy};
-  }
-
-  .fighting {
-    background-color: ${({ theme }) => theme.bgCard.fighting};
-  }
-
-  .fire {
-    background-color: ${({ theme }) => theme.bgCard.fire};
-  }
-
-  .flying {
-    background-color: ${({ theme }) => theme.bgCard.flying};
-  }
-
-  .ghost {
-    background-color: ${({ theme }) => theme.bgCard.ghost};
-  }
+export const ContainerModal = styled.div`
+  margin: 60px auto;
+  width: 800px;
 
   .grass {
-    background-color: ${({ theme }) => theme.bgCard.grass};
-  }
-
-  .ground {
-    background-color: ${({ theme }) => theme.bgCard.ground};
-  }
-
-  .ice {
-    background-color: ${({ theme }) => theme.bgCard.ice};
-  }
-
-  .normal {
-    background-color: ${({ theme }) => theme.bgCard.normal};
-  }
-
-  .poison {
-    background-color: ${({ theme }) => theme.bgCard.poison};
-  }
-
-  .psychic {
-    background-color: ${({ theme }) => theme.bgCard.psychic};
-  }
-
-  .rock {
-    background-color: ${({ theme }) => theme.bgCard.rock};
-  }
-
-  .steel {
-    background-color: ${({ theme }) => theme.bgCard.steel};
-  }
-
-  .water {
-    background-color: ${({ theme }) => theme.bgCard.water};
+    background: url('images/pokeball.svg') no-repeat;
+    background-color: ${({ theme }) => theme.bgType.grass};
+    background-position: right 1rem top -1rem;
+    background-size: 30rem;
+    border-radius: 15px;
+    padding: 20px;
   }
 `;
 
-export const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  background: url('/images/pokeball.svg') no-repeat;
-  background-position: right 1rem top -1rem;
-  background-size: 14rem;
-`;
+export const IdModal = styled.div``;
 
-export const CardText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px 10px 10px 0px;
-  flex: 1;
-`;
+export const NameModal = styled.div``;
+export const ImageContainerModal = styled.div``;
 
-export const CardId = styled.div`
-  font-size: 0.875rem;
-  color: ${({ theme }) => theme.fontColor.id};
-  font-weight: bold;
-  font-family: ${({ theme }) => theme.fontFamily.id};
-  opacity: 0.6;
-`;
-export const CardName = styled.div`
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.fontColor.name};
-  font-weight: bold;
-  font-family: ${({ theme }) => theme.fontFamily.name};
+export const ContainerTypeModal = styled.div``;
+
+export const ProgressBarModal = styled.div`
   text-transform: capitalize;
 `;
 
-export const ContainerType = styled.div`
+export const CardTypeModal = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
+  justify-content: center;
 
-export const CardType = styled.div`
-  display: flex;
-`;
-export const CardImageContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const PokemonTypeText = styled.div`
+  gap: 10px;
   margin-right: 10px;
   margin-top: 5px;
   text-transform: capitalize;
@@ -317,3 +196,5 @@ export const PokemonTypeText = styled.div`
     font-family: ${({ theme }) => theme.fontFamily.type};
   }
 `;
+
+export const TypeTextModal = styled.div``;

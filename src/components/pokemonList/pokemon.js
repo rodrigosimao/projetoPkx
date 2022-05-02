@@ -12,8 +12,20 @@ import {
   CardType,
   PokemonTypeText,
   CardImageContainer,
-  CardNameDetail,
 } from './style';
+
+import {
+  ContainerModal,
+  IdModal,
+  NameModal,
+  ImageContainerModal,
+  ContainerTypeModal,
+  CardTypeModal,
+  ProgressBarModal,
+  TypeTextModal,
+} from './styleModal';
+
+Modal.setAppElement('#root');
 
 const PokemonDetail = (props) => {
   const { pokemon } = props;
@@ -59,43 +71,52 @@ const PokemonDetail = (props) => {
           </CardContainer>
         </div>
       </span>
-      <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal}>
-        <button onClick={handleCloseModal}>Fechar Card</button>
-        <CardId>#{pokemon.id}</CardId>
-        <CardNameDetail>{pokemon.name}</CardNameDetail>
-        <CardImageContainer>
-          <img
-            src={pokemon.sprites.other.home.front_shiny}
-            alt={pokemon.name}
-            height="100px"
-          />
-        </CardImageContainer>
-        <ContainerType>
-          <CardType>
-            {pokemon.types.map((type, index) => {
-              return (
-                <PokemonTypeText>
-                  <div className={type.type.name} key={index}>
-                    {type.type.name}
-                  </div>
-                </PokemonTypeText>
-              );
-            })}
-          </CardType>
-        </ContainerType>
-        <h1>STATUS</h1>
-        {pokemon.stats &&
-          pokemon.stats.map((stat, index) => {
-            return (
-              <ProgressBar
-                key={index}
-                title={stat.stat.name}
-                width={stat.base_stat}
-                text={stat.base_stat}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={handleCloseModal}
+        className={pokemon.types[0].type.name}
+      >
+        <ContainerModal>
+          <div className={pokemon.types[0].type.name}>
+            <button onClick={handleCloseModal}>Fechar Card</button>
+            <IdModal>#{pokemon.id}</IdModal>
+            <NameModal>{pokemon.name}</NameModal>
+            <ImageContainerModal>
+              <img
+                src={pokemon.sprites.other.home.front_shiny}
+                alt={pokemon.name}
+                height="100px"
               />
-            );
-          })}
-        <h1>Base Stats</h1>
+            </ImageContainerModal>
+            <ContainerTypeModal>
+              <CardTypeModal>
+                {pokemon.types.map((type, index) => {
+                  return (
+                    <TypeTextModal>
+                      <div className={type.type.name} key={index}>
+                        {type.type.name}
+                      </div>
+                    </TypeTextModal>
+                  );
+                })}
+              </CardTypeModal>
+            </ContainerTypeModal>
+            <h1>STATUS</h1>
+            {pokemon.stats &&
+              pokemon.stats.map((stat, index) => {
+                return (
+                  <ProgressBarModal>
+                    <ProgressBar
+                      key={index}
+                      title={stat.stat.name}
+                      width={stat.base_stat}
+                      text={stat.base_stat}
+                    />
+                  </ProgressBarModal>
+                );
+              })}
+          </div>
+        </ContainerModal>
       </Modal>
     </BackgroundCard>
   );
