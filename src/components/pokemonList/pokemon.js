@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import React, { memo, useState } from 'react';
-import ProgressBar from '../ProgressBar';
+import ProgressBar from '../progress';
 
 import {
   BackgroundCard,
@@ -16,6 +16,7 @@ import {
 
 import {
   ContainerModal,
+  ButtonModal,
   IdModal,
   NameModal,
   ImageContainerModal,
@@ -23,9 +24,9 @@ import {
   CardTypeModal,
   ProgressBarModal,
   TypeTextModal,
+  ContainerNameIdModal,
+  StatusModal,
 } from './styleModal';
-
-Modal.setAppElement('#root');
 
 const PokemonDetail = (props) => {
   const { pokemon } = props;
@@ -78,16 +79,13 @@ const PokemonDetail = (props) => {
       >
         <ContainerModal>
           <div className={pokemon.types[0].type.name}>
-            <button onClick={handleCloseModal}>Fechar Card</button>
-            <IdModal>#{pokemon.id}</IdModal>
-            <NameModal>{pokemon.name}</NameModal>
-            <ImageContainerModal>
-              <img
-                src={pokemon.sprites.other.home.front_shiny}
-                alt={pokemon.name}
-                height="100px"
-              />
-            </ImageContainerModal>
+            <ButtonModal>
+              <span onClick={handleCloseModal}></span>
+            </ButtonModal>
+            <ContainerNameIdModal>
+              <NameModal>{pokemon.name}</NameModal>
+              <IdModal>#{pokemon.id}</IdModal>
+            </ContainerNameIdModal>
             <ContainerTypeModal>
               <CardTypeModal>
                 {pokemon.types.map((type, index) => {
@@ -100,8 +98,18 @@ const PokemonDetail = (props) => {
                   );
                 })}
               </CardTypeModal>
+              <ImageContainerModal>
+                <img
+                  src={pokemon.sprites.other.home.front_shiny}
+                  alt={pokemon.name}
+                  height="230px"
+                />
+              </ImageContainerModal>
             </ContainerTypeModal>
-            <h1>STATUS</h1>
+            <StatusModal>
+              <h2>status</h2>
+            </StatusModal>
+
             {pokemon.stats &&
               pokemon.stats.map((stat, index) => {
                 return (

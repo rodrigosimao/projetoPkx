@@ -7,7 +7,7 @@ export const TitleList = styled.div`
   max-width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   padding: 10px;
 `;

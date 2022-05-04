@@ -55,7 +55,3 @@ export const MenuListStyle = styled.div`
     align-items: center;
   }
 `;
-
-export const LogoIconStyle = styled.div`
-  margin: 0px 30px;
-`;

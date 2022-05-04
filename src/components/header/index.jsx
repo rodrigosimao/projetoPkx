@@ -1,15 +1,8 @@
 import Modal from 'react-modal';
 import React, { memo, useState } from 'react';
 import Logotipo from '../../assets/images/logo.png';
-import IconTheme from '../../assets/images/icon_moon.png';
 
-import {
-  HeaderStyle,
-  ContainerStyle,
-  LogoStyle,
-  MenuListStyle,
-  LogoIconStyle,
-} from './style';
+import { HeaderStyle, ContainerStyle, LogoStyle, MenuListStyle } from './style';
 
 function Header() {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -52,11 +45,6 @@ function Header() {
             </li>
           </ul>
         </MenuListStyle>
-        <LogoIconStyle>
-          <a href="#">
-            <img src={IconTheme} alt="Icone tema escuro" width="20px" />
-          </a>
-        </LogoIconStyle>
       </ContainerStyle>
     </HeaderStyle>
   );

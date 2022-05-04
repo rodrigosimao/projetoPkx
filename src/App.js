@@ -5,6 +5,8 @@ import PokemonList from './components/pokemonList';
 import Search from './components/search';
 import CarregarPokemons from './components/button';
 import Footer from './components/footer';
+import styled from 'styled-components';
+import Psyduck from './assets/images/psyduck.svg';
 
 function App() {
   const [page, setPage] = useState(0);
@@ -59,7 +61,10 @@ function App() {
       <Header />
       <Search onSearch={onSearchHandler} />
       {notFound ? (
-        <div className="not-found-text">Não encontrado</div>
+        <NotFoundSearch>
+          <h2>Pokemon não encontrado</h2>
+          <img src={Psyduck} alt="Psyduck" width="300px" />
+        </NotFoundSearch>
       ) : (
         <PokemonList
           pokemons={pokemons}
@@ -74,5 +79,9 @@ function App() {
     </div>
   );
 }
+
+const NotFoundSearch = styled.div`
+  text-align: center;
+`;
 
 export default App;
