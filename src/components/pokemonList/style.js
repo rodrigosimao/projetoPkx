@@ -13,7 +13,32 @@ export const TitleList = styled.div`
 `;
 
 export const LoadingCard = styled.div`
-  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: ${({ theme }) => theme.theme.secondary};
+  font-family: ${({ theme }) => theme.fontFamily.name};
+  font-size: 1.5rem;
+
+  p {
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+
+  span {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: ${({ theme }) => theme.theme.secondary};
+    height: 50px;
+    width: 50px;
+  }
+
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 `;
 
 export const PokemonGrid = styled.div`

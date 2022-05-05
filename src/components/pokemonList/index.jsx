@@ -31,9 +31,8 @@ const PokemonList = (props) => {
 
       {loading ? (
         <LoadingCard>
-          <div>
-            <h1>Carregando . . .</h1>{' '}
-          </div>
+          <p>carregando</p>
+          <span></span>
         </LoadingCard>
       ) : (
         <PokemonGrid>

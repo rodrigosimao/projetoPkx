@@ -4,6 +4,10 @@ import Logotipo from '../../assets/images/logo.png';
 
 import { HeaderStyle, ContainerStyle, LogoStyle, MenuListStyle } from './style';
 
+const refreshPage = () => {
+  window.location.reload();
+};
+
 function Header() {
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -19,9 +23,12 @@ function Header() {
     <HeaderStyle>
       <ContainerStyle>
         <LogoStyle>
-          <a href="#">
-            <img src={Logotipo} alt="Logotipo Pokemon" width="161px" />
-          </a>
+          <img
+            onClick={refreshPage}
+            src={Logotipo}
+            alt="Logotipo Pokemon"
+            width="161px"
+          />
         </LogoStyle>
         <MenuListStyle>
           <ul>

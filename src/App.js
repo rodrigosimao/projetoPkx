@@ -81,6 +81,9 @@ function App() {
 }
 
 const NotFoundSearch = styled.div`
+  color: ${({ theme }) => theme.theme.secondary};
+  font-family: ${({ theme }) => theme.fontFamily.name};
+  font-size: 1.5rem;
   text-align: center;
 `;
 
