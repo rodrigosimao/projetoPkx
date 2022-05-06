@@ -3,7 +3,6 @@ import { searchPokemon, getPokemons, getPokemonsData } from './api';
 import Header from './components/header';
 import PokemonList from './components/pokemonList';
 import Search from './components/search';
-import CarregarPokemons from './components/button';
 import Footer from './components/footer';
 import styled from 'styled-components';
 import Psyduck from './assets/images/psyduck.svg';
@@ -74,7 +73,6 @@ function App() {
           totalPages={totalPages}
         />
       )}
-      <CarregarPokemons />
       <Footer />
     </div>
   );
