@@ -56,7 +56,7 @@ function Header() {
                       href="https://www.behance.net/gallery/95727849/Pokdex-App"
                       target="_blank"
                     >
-                      Flavio Farias - Teste.
+                      Flavio Farias.
                     </a>
                   </p>
                   <h3>Objetivo 📌</h3>
