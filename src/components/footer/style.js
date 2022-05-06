@@ -16,7 +16,3 @@ export const ContainerStyle = styled.div`
   font-size: 16px;
   font-family: 'Flexo';
 `;
-
-// export const LogoStyled = styled.div``;
-// export const MenuListStyle = styled.ul``;
-// export const DarkTheme = styled.div``;

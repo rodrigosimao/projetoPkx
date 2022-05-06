@@ -55,3 +55,18 @@ export const MenuListStyle = styled.div`
     align-items: center;
   }
 `;
+
+export const ContainerAbout = styled.div`
+  text-align: center;
+
+  p {
+    margin: 20px auto;
+    width: 700px;
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+
+  a:visited {
+    color: #000000;
+  }
+`;

@@ -1,4 +1,5 @@
 import React, { useState, memo } from 'react';
+import Pokeball from '../../assets/images/pokeball.png';
 
 import { SearchContainer, SearchBar, ButtonSearch } from './style';
 
@@ -26,9 +27,8 @@ const Search = (props) => {
         />
       </SearchBar>
       <ButtonSearch>
-        {/* <button onClick={onButtonClickHandler}>Buscar</button> */}
         <button onClick={onButtonClickHandler}>
-          <img src="./images/teste.png" height="35px"></img>
+          <img src={Pokeball} height="35px"></img>
         </button>
       </ButtonSearch>
     </SearchContainer>

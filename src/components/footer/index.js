@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 import { FooterStyle, ContainerStyle } from './style';
 
@@ -12,4 +12,4 @@ function Footer() {
   );
 }
 
-export default memo(Footer);
+export default Footer;

@@ -130,7 +130,7 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 20px;
-  background: url('/images/pokeball.svg') no-repeat;
+  background: url('images/pokeball.svg') no-repeat;
   background-position: right 1rem top -1rem;
   background-size: 14rem;
 `;
